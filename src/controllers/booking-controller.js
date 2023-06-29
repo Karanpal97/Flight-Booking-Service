@@ -5,10 +5,10 @@
 
 async function createBookings(req,res){
 
-  // console.log(req.body)
+
    try{
 
-      //console.log(req.body)
+   
      
       const response=await BookingService.createBooking({
          flightId:req.body.flightId,

@@ -1,13 +1,25 @@
-const {StatusCodes}=require('http-status-codes');
-const CrudRepositery=require("./crud-repositries");
-const booking=require('../models')
+const { StatusCodes } = require('http-status-codes');
+const { Op } = require("sequelize");
 
-class BookingRepository extends CrudRepositery{
-   constructor(){
-      super(booking);
-   }
-}
+const { Booking } = require('../models');
+const CrudRepository = require('./crud-repositries');
+const {Enums} = require('../utils/common');
+//const { CANCELLED, BOOKED } = Enums.BOOKING_STATUS;
 
-   module.exports={
-      BookingRepository
-   }
+class BookingRepository extends CrudRepository {
+    constructor() {
+        super(Booking);
+    }
+
+    async createBooking(data, transaction) {
+        const response = await Booking.create(data, {transaction: transaction});
+        return response;
+    } }
+
+
+
+
+
+
+   module.exports= BookingRepository
+   

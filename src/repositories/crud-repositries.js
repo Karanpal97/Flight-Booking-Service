@@ -1,16 +1,14 @@
 const {logger}=require("../config");
 const {StatusCodes}=require('http-status-codes');
 const AppError = require("../utils/errors/app-error");
-class CrudRepositery{
-   constructor(model){
-      this.model=model;
+class CrudRepository {
+   constructor(model) {
+       this.model = model;
    }
 
-
-   async create(data){
-
-         const response=await this.model.create(data);
-         return response;
+   async create(data) {
+       const response = await this.model.create(data);
+       return response;
    }
 
 
@@ -65,4 +63,4 @@ class CrudRepositery{
    
 }
 
-module.exports=CrudRepositery;
+module.exports=CrudRepository;

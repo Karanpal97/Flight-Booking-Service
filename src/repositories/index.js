@@ -1,3 +1,2 @@
 module.exports = {
-   BookingRepositery:require("./booking-repositries") 
-}
+   BookingRepository:require("./booking-repositries") }

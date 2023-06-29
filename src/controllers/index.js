@@ -1,5 +1,5 @@
 module.exports = {
     
-     BookingController:require('./booking-controller'),
+    BookingController:require('./booking-controller'),
     InfoController: require('./info-controller'),
 }
