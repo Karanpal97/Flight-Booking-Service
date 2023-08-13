@@ -6,7 +6,7 @@ const SEAT_TYPE={
 
 }
 
-const Booking_Status={
+const BOOKING_STATUS={
    BOOKED:'Booked',
    CANCELLED:'Cancelled',
    PENDING:'Pending',
@@ -15,6 +15,7 @@ const Booking_Status={
 
 module.exports={
    SEAT_TYPE,
-   Booking_Status
+   BOOKING_STATUS
+ 
 }
 //console.log(Booking_Status.BOOKED)
